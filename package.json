@@ -5,11 +5,14 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@babel/preset-env": "7.11.5",
     "@slack/events-api": "^2.3.4",
     "@slack/web-api": "^5.8.0",
     "dotenv": "8.2.0",
     "netlify-lambda": "1.6.3",
     "node-fetch": "2.6.1",
+    "querystring": "0.2.0",
+    "regenerator-runtime": "0.13.7",
     "typescript": "3.8.3"
   },
   "scripts": {
@@ -19,6 +22,7 @@
   "devDependencies": {
     "@babel/preset-typescript": "7.10.4",
     "@types/aws-lambda": "8.10.62",
-    "@types/node": "13.9.2"
+    "@types/node": "13.9.2",
+    "@types/node-fetch": "2.5.7"
   }
 }
