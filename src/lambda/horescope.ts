@@ -72,7 +72,7 @@ export async function handler(event: any, context: Context) {
     }
     const sign = commandToSign(command[0]);
     let period = "today";
-    if (command.length >= 2) {
+    if (command.length >= 1) {
       const c = command[1];
       if (c !== "today" || c !== "week" || c !== "month" || c !== "year") {
         return {
