@@ -74,13 +74,14 @@ export async function handler(event: any, context: Context) {
     let period = "today";
     if (command.length >= 1) {
       const c = command[1];
-      if (c !== "today" || c !== "week" || c !== "month" || c !== "year") {
+      if (c === "today" || c === "week" || c === "month" || c === "year") {
+        period = command[1];
+      } else {
         return {
           statusCode: 200,
           body: "Wrong period, choose 'today', 'week', 'month' or 'year'",
         };
       }
-      period = command[1];
     }
 
     const response = await fetch(`${BASE_URL}/${period}/${sign}`);
