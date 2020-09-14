@@ -5,6 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "encoding": "0.1.13",
     "@babel/preset-env": "7.11.5",
     "@slack/events-api": "2.3.4",
     "@slack/web-api": "5.12.0",
