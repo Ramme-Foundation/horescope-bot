@@ -3,3 +3,6 @@
   functions = "dist/server"
 [template.environment]
   SLACK_TOKEN = "change me for your slack token"
+
+[[plugins]]
+package = "@netlify/plugin-functions-install-core"
