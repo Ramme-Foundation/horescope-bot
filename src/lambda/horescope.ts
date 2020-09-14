@@ -90,7 +90,7 @@ export async function handler(event: any, context: Context) {
       return { statusCode: response.status, body: response.statusText };
     }
     const data = await response.json();
-    fetch(params.response_url, {
+    await fetch(params.response_url, {
       method: "POST",
       body: JSON.stringify({
         response_type: "in_channel",
@@ -99,7 +99,7 @@ export async function handler(event: any, context: Context) {
     });
     return {
       statusCode: 200,
-      body: "",
+      body: "Fetching...",
     };
   } catch (err) {
     console.log(err); // output to netlify function log
